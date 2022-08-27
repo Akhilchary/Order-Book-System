@@ -22,7 +22,6 @@ const create = (req,res) => {
 }
 
 const findBetween = (req,res) => {
-    const stockName = req.body.stockName;
     const fDate = req.body.fDate;
     const tDate = req.body.tDate;
     Order.find(
@@ -38,7 +37,7 @@ const findBetween = (req,res) => {
 }
 
 const executeOrder = (req,res) => {
-    
+
 }
 
 module.exports = {
