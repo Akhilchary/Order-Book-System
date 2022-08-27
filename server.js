@@ -5,6 +5,8 @@ const mongoose = require('mongoose');
 const User = require('./models/user.model');
 // const userRoutes = require('./routes/user.route');
 const userController = require('./controllers/user.controller');
+const orderController = require('./controllers/order.controller');
+const marketController = require('./controllers/market.controller');
 const app = express();
 const dbURI = "mongodb+srv://noobguy77:pass@cluster0.gaovqwk.mongodb.net/?retryWrites=true&w=majority";
 app.set('view engine','ejs');
@@ -39,3 +41,7 @@ app.get('/register',(req,res) => {
 app.post('/register',userController.create);
 
 app.post('/login',userController.login);
+
+app.post('/createOrder',orderController.create);
+
+app.get('/marketStatus',marketController.marketStatus);
