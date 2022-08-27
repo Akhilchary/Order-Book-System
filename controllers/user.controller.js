@@ -1,5 +1,5 @@
 const User = require('../models/user.model')
-
+const md5=require(md5);
 const create = (req,res) => {
     User.find({username : req.body.username})
     .then((users) => {
@@ -10,7 +10,7 @@ const create = (req,res) => {
         const user = new User({
             name : req.body.name,
             username : req.body.username,
-            password : req.body.password
+            password : md5(req.body.password)
         })
         user.save()
         .then((data) =>{
@@ -30,7 +30,7 @@ const login = (req,res) => {
     .then((user) => {
         // console.log(user);
         user = user[0];
-        if(user.username == req.body.username && user.password == req.body.password)
+        if(user.username == req.body.username && user.password == md5(req.body.password))
         {
             if(user.admin == true)
             {
