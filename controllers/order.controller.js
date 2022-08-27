@@ -21,10 +21,27 @@ const create = (req,res) => {
     })
 }
 
+const findBetween = (req,res) => {
+    const stockName = req.body.stockName;
+    const fDate = req.body.fDate;
+    const tDate = req.body.tDate;
+    Order.find(
+        {stockName : req.body.stockName},
+        {createdAt:{$gte:ISODate(fDate),$lt:ISODate(tDate)}}
+    )
+    .then((data) => {
+        res.send(data);
+    })
+    .catch((err) => {
+        res.render("error",{data: err.message});
+    })
+}
+
 const executeOrder = (req,res) => {
     
 }
 
 module.exports = {
-    create
+    create,
+    findBetween
 }

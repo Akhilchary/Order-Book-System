@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>J Bank : Home</title>
+    <title>Book Order</title>
     <!-- CSS only -->
   <style>
         *{
@@ -282,37 +282,33 @@
             <li><a href="#">Book Order</a></li>
             <li><a href="#">Admin</a></li>
             <li><a href="#">Order By</a></li>
-            
-           
             <li><button class="login-button"><a href="/login">Login</a></button></li>
             <li><button class="join-button" href="#"><a href="/register">register</a></button></li>
-           
         </ul>
     </nav>
     <div class="main">
         <div class="dropdown">
             <button class="dropbtn">Search Stock</button>
             <div class="dropdown-content">
-              <a href="#">DBS</a>
-              <a href="#">LIC</a>
-              <a href="#">TCS</a>
+                <a href="#">DBS</a>
+                <a href="#">LIC</a>
+                <a href="#">TCS</a>
             </div>
         </div>
         <div class="dropdown">
             <button class="dropbtn1">Order Type</button>
             <div class="dropdown-content">
-              <a href="#">Limit</a>
-              <a href="#">Market</a>             
+                <a href="#">Limit</a>
+                <a href="#">Market</a>             
             </div>
         </div>  
-          
-          <form action="/">
+        <form action="/createOrder">
             <label  for="price">Price</label></br>
             <input type="number" id="price" name="price"><br><br>
             <label for="quantity">Quantity</label></br>
             <input type="number" id="quantity" name="quantity"><br><br>
             <input type="submit" value="Place Order">
-          </form>
+        </form>
     </div>
     <script>
         
