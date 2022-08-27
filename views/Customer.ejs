@@ -289,21 +289,25 @@
         </ul>
     </nav>
     <div class="main">
-        <div class="dropdown">
-            <button class="dropbtn">Search Stock</button>
-            <div class="dropdown-content">
-              <a href="#">DBS</a>
-              <a href="#">LIC</a>
-              <a href="#">TCS</a>
-            </div>
-        </div>
-        <div class="dropdown">
-            <button class="dropbtn1">Order Type</button>
-            <div class="dropdown-content">
-              <a href="#">Limit</a>
-              <a href="#">Market</a>             
-            </div>
-        </div>  
+        <form action="/">
+            <label for="stock">Search stock</label></br>
+            <select name="stock" id="stock">
+              <option value="DBS">DBS..</option>
+              <option value="SBI">SBI</option>
+              <option value="LIC">LIC</option>
+              <option value="TATA">TATA</option>
+            </select>
+            <br><br>
+          </form>
+          <form action="/">
+            <label for="order">Order type</label></br>
+            <select name="order" id="order">
+              <option value="limit">Limit</option>
+              <option value="market">Market</option>
+              
+            </select>
+            <br><br>
+          </form> 
           
           <form action="/">
             <label  for="price">Price</label></br>
