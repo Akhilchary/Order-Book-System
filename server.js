@@ -1,16 +1,15 @@
 const express = require('express');
-const fetch = require("node-fetch");
-const cors = require("cors");
+// const fetch = require("node-fetch");
+// const cors = require("cors");
 const mongoose = require('mongoose');
 const User = require('./models/user.model');
-const userRoutes = require('./routes/user.route');
+// const userRoutes = require('./routes/user.route');
 const userController = require('./controllers/user.controller');
-const bankAcController = require('./controllers/bankAc.controller');
 const app = express();
 const dbURI = "mongodb+srv://noobguy77:pass@cluster0.gaovqwk.mongodb.net/?retryWrites=true&w=majority";
 app.set('view engine','ejs');
 app.use(express.urlencoded({extended: true}));
-app.options("*", cors());
+// app.options("*", cors());
 // app.use(userRoutes);
 
 mongoose.connect(dbURI,{useNewUrlParser: true, useUnifiedTopology: true})
