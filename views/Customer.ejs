@@ -289,27 +289,21 @@
         </ul>
     </nav>
     <div class="main">
-        <form action="/">
+        <form method = "post" action="/createOrder">
             <label for="stock">Search stock</label></br>
-            <select name="stock" id="stock">
-              <option value="DBS">DBS..</option>
+            <select name="stockName" id="stock">
+              <option value="DBS">DBS</option>
               <option value="SBI">SBI</option>
               <option value="LIC">LIC</option>
               <option value="TATA">TATA</option>
             </select>
             <br><br>
-          </form>
-          <form action="/">
             <label for="order">Order type</label></br>
-            <select name="order" id="order">
-              <option value="limit">Limit</option>
-              <option value="market">Market</option>
-              
+            <select name="orderType" id="order">
+                <option value="LIMIT">Limit</option>
+                <option value="MARKET">Market</option>
             </select>
             <br><br>
-          </form> 
-          
-          <form action="/">
             <label  for="price">Price</label></br>
             <input type="number" id="price" name="price"><br><br>
             <label for="quantity">Quantity</label></br>

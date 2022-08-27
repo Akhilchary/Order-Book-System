@@ -47,4 +47,6 @@ app.post('/login',userController.login);
 
 app.post('/createOrder',orderController.create);
 
+app.post('/fetchOrders',orderController.findBetween);
+
 app.get('/marketStatus',marketController.marketStatus);
