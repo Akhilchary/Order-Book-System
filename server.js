@@ -34,6 +34,9 @@ app.get('/login',(req,res) => {
 app.get('/register',(req,res) => {
     res.render('register');
 })
+app.get('/customer',(req,res)=>{
+    res.render('Customer');
+})
 
 
 app.post('/register',userController.create);

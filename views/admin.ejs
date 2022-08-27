@@ -23,8 +23,7 @@
             background-color: #131418;
             box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
             display: flex;
-            position: relative;
-            top: 0;
+            position: fixed;
             z-index: 10;
         }
 
@@ -110,10 +109,7 @@
         .hamburger{
             display: none;
         }
-        .main{
-            position: relative;
-            
-        }
+
         /*Stying for small screens*/
         @media screen and (max-width: 800px){
             nav{
@@ -201,7 +197,7 @@
         </div>
         <ul class="nav-links">
             <li><a href="#">Home</a></li>
-            <li><a href="/customer">Book Order</a></li>
+            <li><a href="">Customers</a></li>
             <li><a href="#">Admin</a></li>
             <li><a href="#">Order By</a></li>
             
@@ -213,10 +209,7 @@
             <% } %>
         </ul>
     </nav>
-    <div class="main">
-        <button> OPEN Market</button>
-        <button> Open Market</button>
-    </div>
+    
     <script>
         const hamburger = document.querySelector(".hamburger");
         const navLinks = document.querySelector(".nav-links");
